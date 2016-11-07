@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Demander a l'utilisateur deux nombres à virgule. ne garder que la partie entiere du premier. Les multiplier et afficher le resultat dans une boite de dialogue</title>
+  </head>
+  <body>
+    <form>
+                <label for="premier_nombre">Premier nombre : </label><input type="text" id="premier_nombre" name="premier_nombre"/><br/>
+                <label for="deuxieme_nombre">Deuxième nombre : </label><input type="text" id="deuxieme_nombre" name="deuxieme_nombre"/><br/>
+                <button  id="valider" name ="valider" onclick="calcul()">Valider</button>
+    </form>
+  <script type="text/javascript">
+
+          function calcul() {
+            var premier = document.getElementById('premier_nombre').value;
+            var deuxieme = document.getElementById('deuxieme_nombre').value;
+            premier = Math.floor(premier);
+            var resultat = premier * deuxieme;
+            alert("Voici le résultat de " + premier + " multiplié par " + deuxieme + " = " + resultat );
+          }
+    </script>
+  </body>
+</html>
